@@ -1,0 +1,37 @@
+  
+  <div id="wrapper"  ng-class="{wrapperActive:true}" ng-click="config.keyboardShow=false">
+      <div class="scroller" ng-class="{scrolleractive:config.keyboardShow}">
+           <div class="content">
+               <div class="ctop">
+                    <div translate>Amount</div>
+                    <div>${{config.money}}</div>
+                    <div>收款人 xxxxx xxx</div>
+                    <div class="language" translate ng-click="language()">English</div>
+               </div>
+               <div class="cbottom">
+                  <div >{{'OrderSum' | translate}}:${{config.money}}<span ng-if="config.selfTips" style="font-size:1rem;" >({{'HaveTips' | translate}}${{config.selfTips}})<span></div>
+                  <div class="tips clearfix">
+                    
+                     <div ng-repeat="tip in config.tipsList  track by $index" ng-if="!$last"  ng-class="{active:tip.active}" ng-click="changeTip($index)">
+                      {{tip | formatAmount:this | translate}}
+                       <div ng-class="{tipsBottom:$index,tipsIndex:!$index}"  translate>{{tip.key}}</div>
+                       <div ng-class='{other:true}' ng-if="$index==6" translate>Other</div>
+                     </div> 
+                   
+                    
+                  </div>
+
+               </div>
+              
+
+           
+           </div>
+              
+<footer class="footer"> 
+          <div translate  ng-click="pay()" ng-class="{'alipBgColor':true,'wechatBgColor':false}">Pay</div> 
+           <a href="/pay/split" style="height:40px;padding:0 10px;display:block;" translate>Split</a>
+    </footer>
+  </div> 
+
+  </div>
+ 

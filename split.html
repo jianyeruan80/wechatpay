@@ -1,0 +1,64 @@
+
+  
+  <div id="wrapper">
+      <div class="scroller">
+           <div class="contentSplit">
+           
+            <div class="contentSplit-one">
+                    
+                        <div>
+                           <div style="float:left;width:50%"  ng-class='{"dutch":config.dutch}'  translate ng-click="config.dutch=true">GoDutch</div>
+                           <div style="float:left" '{"dutch":!config.dutch}' ng-class='{"dutch":!config.dutch}' ng-click="config.dutch=false" translate>EditAmount</div>
+                        </div>
+
+                   
+            </div>
+
+            <div class="contentSplit-six" ng-if="!config.dutch">
+                         <div class="f1"></div>
+                         <div class="contentSplit-six-child"><div translate>ModifyAmountTo</div><div>$
+                          <span>{{config.tempAmount}} </span><span></span>
+                         </div></div>
+                         <div class="f1"></div>
+            </div>
+                      <div class="contentSplit-two" ng-if="config.dutch" >
+                            
+                            <div translate >ThisTimeAmount</div><div>${{config.Amount}}</div>
+
+
+                      </div>
+                      <div class="contentSplit-three" ng-if="config.dutch">
+                           <div class="contentSplit-three-child">
+                             <div translate>PersonCount</div>
+                             <div>{{config.number}}</div>
+                             <div ng-click="sub()">-</div>
+
+                             <div ng-click="add()">+</div>
+
+                           </div>
+                      </div>
+                      <div class="contentSplit-four" ng-if="config.dutch">
+                                       <div class="contentSplit-four-childone">
+                                         <div>{{'Average' | translate}} <span ng-class="{'alipColor':true,'wechatColor':false}">${{config.oneAmout}}</span></div>
+                                         <div>X<span ng-class="{'alipColor':true,'wechatColor':false}" style="margin:0 10px;">{{config.count}}<span></div>
+                                       </div>
+                                       <div class="contentSplit-four-childtwo">
+                                         <div translate>OrderSum</div><div ng-class="{'alipColor':true,'wechatColor':false}">${{config.getAmout}}</div>
+
+                                       </div>
+                      </div>
+            
+            <div class="contentSplit-five">
+                <div translate ng-click="backPay()" ng-class="{'alipBgColor':true,'wechatBgColor':false}">OK</div> 
+            </div>
+      
+ </div> 
+ </div>
+  
+
+
+    <div class="keyBoard" ng-if="!config.keyboardShow">
+          <div ng-repeat="item in config.keyboard" ng-click='inputAmount($event)'>
+              {{item}}
+          </div>
+    </div>

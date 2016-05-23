@@ -126,7 +126,7 @@ $translateProvider.preferredLanguage('en');
       $scope.config.oneAmout=$scope.config.Amount;
       $scope.config.getAmout=$scope.config.Amount;
       $scope.config.keyboard=[
-      '1','2','3','4','5','6','7','8','9','.','0','x'
+      '1','2','3','4','5','6','7','8','9','.','0','×'
       ]
       $scope.config.keyboardShow=false;
       $scope.config.dutch=true;
@@ -174,7 +174,7 @@ $translateProvider.preferredLanguage('en');
          $scope.inputAmount=function(e){
             $scope.stop();
             var v=e.target.innerText;
-            if(v=="x"){
+            if(v=="×"){
               var vv=$scope.config.tipsList[6].value;
               if(vv.length>0){
                 $scope.config.tipsList[6].value=vv.substring(0,vv.length-1);

@@ -31,7 +31,7 @@
                            <div class="contentSplit-three-child">
                              <div translate>PersonCount</div>
                              <div>{{config.number}}</div>
-                             <div ng-click="sub()">-</div>
+                             <div ng-click="sub()">－</div>
 
                              <div ng-click="add()">+</div>
 
@@ -40,7 +40,7 @@
                       <div class="contentSplit-four" ng-if="config.dutch">
                                        <div class="contentSplit-four-childone">
                                          <div>{{'Average' | translate}} <span ng-class="{'alipColor':true,'wechatColor':false}">${{config.oneAmout}}</span></div>
-                                         <div>X<span ng-class="{'alipColor':true,'wechatColor':false}" style="margin:0 10px;">{{config.count}}<span></div>
+                                         <div>×<span ng-class="{'alipColor':true,'wechatColor':false}" style="margin:0 10px;">{{config.count}}<span></div>
                                        </div>
                                        <div class="contentSplit-four-childtwo">
                                          <div translate>OrderSum</div><div ng-class="{'alipColor':true,'wechatColor':false}">${{config.getAmout}}</div>

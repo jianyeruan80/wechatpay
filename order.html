@@ -1,5 +1,5 @@
   
-  <div id="wrapper"  ng-class="{wrapperActive:true}" ng-click="config.keyboardShow=false">
+  <div id="wrapper"  iscroll-directive ng-class="{wrapperActive:true}" ng-click="config.keyboardShow=false">
       <div class="scroller" ng-class="{scrolleractive:config.keyboardShow}">
            <div class="content">
                <div class="ctop">
@@ -29,7 +29,7 @@
               
 <footer class="footer"> 
           <div translate  ng-click="pay()" ng-class="{'alipBgColor':true,'wechatBgColor':false}">Pay</div> 
-           <a href="/pay/split" style="height:40px;padding:0 10px;display:block;" translate>Split</a>
+           <a href="/wechatpay/split" style="height:40px;padding:0 10px;display:block;" translate>Split</a>
     </footer>
   </div> 
 

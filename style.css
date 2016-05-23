@@ -61,7 +61,8 @@ body {
           user-select: none;
   -webkit-text-size-adjust: none;
       -ms-text-size-adjust: none;
-          text-size-adjust: none; }
+          text-size-adjust: none;
+  min-height: 350px; }
 
 .scrolleractive {
   top: -30vh !important; }
@@ -118,10 +119,10 @@ body {
 
 .ctop {
   width: 100%;
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   line-height: 1.5;
   display: -webkit-box;
   display: -webkit-flex;
@@ -193,10 +194,10 @@ body {
 
 .cbottom {
   width: 100%;
-  -webkit-box-flex: 7;
-  -webkit-flex: 7;
-      -ms-flex: 7;
-          flex: 7;
+  -webkit-box-flex: 8;
+  -webkit-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

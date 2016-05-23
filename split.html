@@ -1,6 +1,6 @@
 
   
-  <div id="wrapper">
+  <div id="wrapper" iscroll-directive>
       <div class="scroller">
            <div class="contentSplit">
            
@@ -52,13 +52,13 @@
                 <div translate ng-click="backPay()" ng-class="{'alipBgColor':true,'wechatBgColor':false}">OK</div> 
             </div>
       
- </div> 
  </div>
-  
-
-
-    <div class="keyBoard" ng-if="!config.keyboardShow">
+     <div class="keyBoard" ng-if="!config.keyboardShow">
           <div ng-repeat="item in config.keyboard" ng-click='inputAmount($event)'>
               {{item}}
           </div>
     </div>
+ </div>
+  
+
+
